@@ -39,13 +39,21 @@
 
 - (void)didFinishSavingImage:(UIImage *)image error:(NSError *)error contextInfo:(id)contextInfo {
     if (_result != nil) {
-        _result(@(error == nil));
+        if (error) {
+            _result(@false);
+        } else {
+            _result(@true);
+        }
     }
 }
 
 - (void)didFinishSavingVideo:(NSString *)videoPath error:(NSError *)error contextInfo:(id)contextInfo {
     if (_result != nil) {
-        _result(@(error == nil));
+        if (error) {
+            _result(@false);
+         } else {
+            _result(@true);
+         }
     }
 }
 
