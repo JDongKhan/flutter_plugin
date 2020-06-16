@@ -1,7 +1,6 @@
 name: albumsaver
 description: A new flutter plugin project for save image to gallery
 version: 0.0.1
-author: 419591321@qq.com
 homepage: https://github.com/JDongKhan/flutter_plugin.git
 
 environment:

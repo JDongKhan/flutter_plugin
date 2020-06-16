@@ -1,7 +1,7 @@
 #import "AlbumsaverPlugin.h"
 
 @implementation AlbumsaverPlugin {
-    FlutterResult *_result;
+    FlutterResult _result;
 }
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
@@ -39,13 +39,13 @@
 
 - (void)didFinishSavingImage:(UIImage *)image error:(NSError *)error contextInfo:(id)contextInfo {
     if (_result != nil) {
-        _result(error == nil);
+        _result(@(error == nil));
     }
 }
 
 - (void)didFinishSavingVideo:(NSString *)videoPath error:(NSError *)error contextInfo:(id)contextInfo {
     if (_result != nil) {
-        _result(error == nil);
+        _result(@(error == nil));
     }
 }
 
